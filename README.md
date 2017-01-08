@@ -5,6 +5,14 @@ Riemann-dash ansible role
 
 dashboard for [Riemann](http://riemann.io)
 
+Tested OS
+--------------
+Role works only on modern dystros with `systemd` support
+
+- Debian 8
+- Ubuntu 16.04
+- Centos 7
+
 Role Variables
 --------------
 `riemann_dash_port` dash port to listen (default 4567)
