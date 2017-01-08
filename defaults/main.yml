@@ -1,0 +1,6 @@
+---
+
+riemann_dash_port: 4567
+riemann_dash_listen: "127.0.0.1"
+
+riemann_conf_dir: /etc/riemann

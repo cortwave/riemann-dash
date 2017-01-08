@@ -1,0 +1,24 @@
+---
+
+- name: Install riemann-tools
+  gem: name=riemann-tools state=latest user_install=no
+
+- name: Install riemann-dash
+  gem: name=riemann-dash state=latest user_install=no
+
+- name: Create service file
+  template: src=riemann-dash.service.j2 dest=/etc/systemd/system/riemann-dash.service owner=root group=root mode=0644
+  notify:
+    - reload systemd
+    - restart riemann-dash
+
+- meta: flush_handlers
+
+- name: Create configuration file
+  template: src=dash.rb.j2 dest="{{ riemann_conf_dir }}/dash.rb" owner=root group=root mode=0644
+  notify:
+    - restart riemann-dash
+
+
+- name: Start Riemann dash
+  service: name=riemann-dash state=started

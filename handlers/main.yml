@@ -1,0 +1,7 @@
+---
+
+- name: restart riemann-dash
+  service: name=riemann-dash state=restarted
+
+- name: reload systemd
+  command: systemctl daemon-reload

@@ -1,0 +1,11 @@
+[Unit]
+Description=Riemann Dashboard
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/riemann-dash {{ riemann_conf_dir }}/dash.rb
+PidFile=/var/run/riemann-dash.pid
+Restart=on-failure
+
+[Install]
+Alias=riemann-dash.service
