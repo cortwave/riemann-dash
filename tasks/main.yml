@@ -2,7 +2,7 @@
 
 - name: Create config dir
   file:
-  path: {{ rienamm_conf_dir }}
+  path: "{{ rienamm_conf_dir }}"
   state: directory
   mode: 0644
 
