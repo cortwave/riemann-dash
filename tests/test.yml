@@ -11,5 +11,4 @@
   roles:
     - { role: ruby,
         ruby_version: 2.2.1 }
-    - { role: role_under_test,
-        riemann_dash_listen: '{{ ansible_eth0["ipv4"]["address"] }}' }
+    - role: role_under_test
