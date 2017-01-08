@@ -1,5 +1,11 @@
 ---
 
+- name: Create config dir
+  file:
+  path: {{ rienamm_conf_dir }}
+  state: directory
+  mode: 0644
+
 - name: Install riemann-tools
   gem: name=riemann-tools state=latest user_install=no
 
