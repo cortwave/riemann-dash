@@ -1,6 +1,8 @@
 Riemann-dash ansible role
 =========
 
+[![Build Status](https://travis-ci.org/cortwave/riemann-dash.svg?branch=master)](https://travis-ci.org/cortwave/riemann-dash)
+
 dashboard for [Riemann](http://riemann.io)
 
 Role Variables
